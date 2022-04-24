@@ -1,0 +1,254 @@
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="nav-jsfile.js"></script>
+        <link rel="stylesheet" type="text/css" href="footer.css">
+        <link rel="stylesheet" type="text/css" href="header.css">
+        <link rel="stylesheet" type="text/css" href="./font/stylesheet.css">
+
+<title>Workshop by UNCHARTED&copy;</title>   
+    <style>
+        *,*::before,*::after{
+            box-sizing: border-box;
+        }
+        :root{
+            --lightpink: #F8A5C2;
+            --darkpink: #EF5B67;
+            --darkblue:  #303952;
+            
+        }
+        body{
+            top:0;
+            left: 0;
+            margin: 0;
+            cursor: crosshair;
+        }
+        
+        .hero{
+            top:0;
+            left:0;
+            position: relative;
+            width: 80%;
+            height: 100vh;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 35% 50%;
+            align-content: space-around;
+            justify-items:center;
+            font-family: "Montserrat", sans-serif;
+        }
+        .title{
+            width: 100%;
+            height: auto;
+            display: grid;
+            justify-items: center;
+            
+        }
+        .hero h1{
+            font-size: 3.5rem;
+            color: var(--darkblue);
+        }
+        
+        .hero p{
+            font-size: 1.8rem;
+            color: var(--darkblue);
+            text-align: center;
+        }
+        
+        .items{
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 60% 40%;
+            align-content:start;
+            justify-items:center;
+        }
+        .drop{
+            width: 80%;
+            height: 200px;
+            border: 4px var(--darkpink) dashed;
+            display: grid;
+            place-items:center center;
+        }
+        
+        button{
+            width: 200px;
+            height: 50px;
+            font-size: 1.3rem;
+            background-color:var(--darkpink);
+            border: 1px var(--darkpink) solid;
+            color: var(--darkblue);
+        }
+        
+        button:hover{
+            background-color:var(--lightpink);
+            border: 1px var(--darkblue) solid;
+            color: var(--darkpink);
+            box-shadow: 10px 15px 5px grey;    
+        }
+        
+        
+        .hero h4{
+            font-size: 1rem;
+            color: var(--darkpink);
+            text-align: center;
+            font-weight: 400;
+            
+        }
+        
+        .hero h7{
+            font-size: 0.8rem;
+            color: var(--darkpink);
+            text-align: center;
+            font-weight: 400;
+            font-style: italic;
+        }
+        
+        .overlay{
+            top:0;
+            left:0;
+            position: absolute;
+            background-image: linear-gradient(var(--darkblue), white);
+            width: 100%;
+            z-index: -10;
+            height: 100vh;
+        }
+         @media only screen and (max-width: 1200px){
+            .hero h1{
+                font-size: 2.3rem;
+                color: var(--darkblue);
+            }
+            
+            .hero p{
+                font-size: 1.25rem;
+                color: var(--darkblue);
+            }
+        }
+        @media only screen and (max-width: 800px){
+    
+            .hero h1{
+                font-size: 2.3rem;
+                color: var(--darkblue);
+            }
+            
+            .hero p{
+                font-size: 1.25rem;
+                color: var(--darkblue);
+            }
+            
+            .items{
+                grid-template-rows: 40% 40%;
+                font-size: 0.8rem;
+            }
+            .drop{
+                width: 80%;
+                height: 100px;
+                border: 4px var(--darkpink) solid;
+                display: grid;
+                place-items:center center;
+            }
+            
+            button{
+                font-size: 0.8rem;
+                width: 170px;
+            }
+        }
+             
+        @media only screen and (max-width: 500px){
+        
+            
+         
+            
+
+            .hero h1{
+                font-size: 1.5rem;
+                color: var(--darkblue);
+            }
+            
+            .hero p{
+                font-size: 1rem;
+                color: var(--darkblue);
+            }
+            
+            .hero h7{
+                font-size: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+<nav id="nav">
+        <div class="menu" onclick="openNav()">
+            <div class="menu1" ></div>
+            <div class="menu2" ></div>
+            <div class="menu3" ></div>
+        </div>
+        <div class="logo">
+            <h1>unchARTed</h1>
+        </div>
+        <div class="signup">
+            <a href="#"><i class="material-icons">perm_identity</i></a>
+        </div>
+    <div class="fullnav" id="menu-display">
+        <div class="menu-new" onclick="closeNav()">
+            <div class="menu-new1"></div>
+            <div class="menu-new2"></div>
+        </div>
+        
+        <a class="item" href="#">HOME</a>
+        <a class="item" href="#">APPARELS</a>
+        <a class="item" href="#">STORE</a>
+        <a class="item" href="#">JOURNEY</a>
+        <a class="item" href="#">CONTACT</a>
+    </div>
+</nav>
+    <div class="overlay"></div>
+<div class="hero">
+    <div class="title">
+        <h1>Welcome To Our Workshop</h1>
+        <p>To participate in our fashion design workshop,<br> 
+kindly sign up first and then upload your resume here&#42;.</p>
+        <h7>&#42;Your application will only be considered if you're logged in</h7>
+    </div>
+    <div class="items">
+        <div class="drop">
+            <h4>Drag your resume or click/tap</h4>
+        </div>
+        <button value="submit" name="Submit">Submit</button>
+    </div>
+</div>
+
+    
+<div class="footer">
+    <div class="con-info">
+        <div class="socials">
+            <h2>instagram</h2>
+            <h2>facebook</h2>
+            <h2>twitter</h2>
+        </div>
+        <div class="mails">
+            <div class="mail1">
+                 <h2>For any other inquires email us at:</h2>
+                <h2><a href="mailto:hello@uncharted.io">hello@uncharted.io</a></h2>
+            </div>
+            <div class="team">
+                <h2> Made with ❤️ by Dhruval Raval and Deep Raval</h2>
+            </div>
+        </div>
+    </div>
+    <div class="rights">
+        <h3>All rights reserved by UNCHARTED<sup>&copy;</sup></h3>
+    </div>
+</div>
+
+</body>
+</html>

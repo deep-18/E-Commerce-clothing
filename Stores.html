@@ -1,0 +1,155 @@
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:40cc0,700,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="nav-jsfile.js"></script>
+        <link rel="stylesheet" type="text/css" href="footer.css">
+        <link rel="stylesheet" type="text/css" href="header.css">
+    <title>Stores of Uncharted</title>
+    <style>
+        *,*::before,*::after{
+            box-sizing: border-box;
+        }
+        :root{
+            --lightpink: #F8A5C2;
+            --darkpink: #EF5B67;
+            --darkblue:  #303952;
+            
+        }
+        body{
+            top:0;
+            left: 0;
+            margin: 0;
+            cursor: crosshair;
+        }
+        .hero
+        {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 20% 80%;
+            grid-row-gap: 20px;
+            justify-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+        .hero p
+        {
+            color: var(--darkpink);
+            text-decoration: underline;
+            font-size: 2rem;
+            font-family: "Montserrat", sans-serif;;
+        }
+        .hero img
+        {
+            width: 70%;
+            
+         }
+        .overlay
+        {
+            top: 0;
+            left: 0;
+            background: linear-gradient(var(--lightpink),transparent);
+            position: absolute;
+            z-index: -10;
+            height: 90vh;
+            width: 100%;
+        }
+@media only screen and (max-width: 800px){
+            .hero{
+                
+                grid-template-columns: 100%;
+                grid-template-rows: 10% 50%;
+                height: 50%;
+    
+            }
+            .hero p{
+                font-size: 1.5rem;
+            }
+            .hero img
+            {
+                width: 70%;
+            }
+            .overelay{
+                height: 90vh;
+                width: 100%;
+            }
+        }
+@media only screen and (max-width: 500px){
+            
+            .hero p{
+                font-size: 1rem;
+            }
+            .hero img
+            {
+                width: 70%;
+            }
+            .overelay{
+                height: 90vh;
+                width: 100%;
+            }
+        }
+        
+        
+        
+    </style>
+    <body>
+<nav id="nav">
+        <div class="menu" onclick="openNav()">
+            <div class="menu1" ></div>
+            <div class="menu2" ></div>
+            <div class="menu3" ></div>
+        </div>
+        <div class="logo">
+            <h1>unchARTed</h1>
+        </div>
+        <div class="signup">
+            <a href="#"><i class="material-icons">perm_identity</i></a>
+        </div>
+    <div class="fullnav" id="menu-display">
+        <div class="menu-new" onclick="closeNav()">
+            <div class="menu-new1"></div>
+            <div class="menu-new2"></div>
+        </div>
+        
+        <a class="item" href="#">HOME</a>
+        <a class="item" href="#">APPARELS</a>
+        <a class="item" href="#">STORE</a>
+        <a class="item" href="#">JOURNEY</a>
+        <a class="item" href="#">CONTACT</a>
+   </div>
+</nav>
+    <div class="overlay">    
+        
+        </div>
+    <div class="hero">
+         <p>Stores Worldwide</p>
+         <img src="./images/map.png"> 
+    </div>    
+<div class="footer">
+    <div class="con-info">
+        <div class="socials">
+            <h2>instagram</h2>
+            <h2>facebook</h2>
+            <h2>twitter</h2>
+        </div>
+        <div class="mails">
+            <div class="mail1">
+                 <h2>For any other inquires email us at:</h2>
+                <h2><a href="mailto:hello@uncharted.io">hello@uncharted.io</a></h2>
+            </div>
+            <div class="team">
+                <h2> Made with<span> ❤️ </span>by Dhruval Raval and Deep Raval</h2>
+            </div>
+        </div>
+    </div>
+    <div class="rights">
+        <h3>All rights reserved by UNCHARTED<sup>&copy;</sup></h3>
+    </div>
+</div>
+        
+    </body>
+

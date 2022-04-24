@@ -1,0 +1,274 @@
+#menu-display{
+    top:0;
+    left:-800%;
+    width:0%;
+    height: 100vh;
+    position: absolute;
+    background-color: var(--darkblue);
+    text-align: center;
+    padding: 50px;
+    z-index:5000000;
+    display:flex;
+    transition: 0.5s ease-in-out;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    cursor: crosshair;
+}
+
+a{
+    cursor: pointer;
+    color: var(--lightpink);
+    font-size:5rem;
+    font-family: 'monument_extendedultrabold','Montserrat';
+    text-decoration: none;
+    transition: 1s;
+    margin: 20px;
+    
+}
+
+a:hover{
+    color: var(--lightpink);
+}
+span {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+span:before, span:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  top: 50%;
+  margin-top: -0.5px;
+  background: #fff;
+}
+
+span:before {
+  left: -2.5px;
+}
+span:after {
+  right: 2.5px;
+  background: var(--darkblue);
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+  span:hover:before {
+    background: var(--darkblue);
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+span:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+
+
+.active {
+    color: var(--darkpink);
+    text-decoration: line-through;
+    user-select: none;
+    text-decoration-color: white;
+}
+.active:disabled,
+.active:hover{
+    color: var(--darkpink);
+    text-shadow: none;
+    
+}
+
+
+.menu-new{
+    top:0;
+    left:0;
+    position: absolute;
+    padding-left: 20px;
+    padding-top:30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5px;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    
+}
+.menu-new1{
+        animation: magic1 1.5s ease;
+}
+.menu-new1,
+.menu-new2{
+    top:50px;
+    left: 20px;
+    height: 3px;
+    position: absolute;
+    width: 45px;
+    transform: rotate(45deg);
+    background-color: var(--darkpink);
+
+}
+
+@keyframes magic1{
+    0%{
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+    
+    100%{
+        transform: rotate(45deg);
+        opacity: 1;
+    }
+}
+
+.menu-new2{
+    transform: rotate(-45deg);
+    animation: magic2 1.5s ease;
+}
+
+@keyframes magic2{
+    0%{
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+    
+    100%{
+        transform: rotate(-45deg);
+        opacity: 1;
+    }
+}
+        nav{
+            top:0;
+            left:0;
+            padding-left: 20px;
+            padding-right:20px;
+            position: sticky;
+            background-color:transparent;
+            width: 100%;
+            height: 100px;
+            display: grid;
+            grid-template-columns:1fr 6fr 1fr;
+            grid-template-rows: 1fr;
+            align-items: center;    
+            z-index: 1000000;
+            
+        }
+        
+        .menu{
+            top:0;
+            left:0;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 5px;
+            cursor: pointer;
+            
+        }
+        
+        .menu1{
+            height: 3px;
+            width: 25px;
+            background-color: var(--darkpink);
+            transition: 0.3s;
+        }
+        .menu2{
+            height: 3px;
+            width: 45px;
+            background-color:var(--darkpink);
+        }
+        
+        .menu3{
+            height: 3px;
+            width: 35px;
+            background-color: var(--darkpink);
+            transition: 0.3s;
+        }
+        .menu:hover .menu1{
+            width: 35px;
+        }
+        .menu:hover .menu3{
+            width: 25px;
+        }
+
+        .logo{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            place-items:center center;
+        }
+        
+        .logo h1{
+            font-family: 'Major Mono Display', monospace;
+            color: var(--darkpink);
+            font-size: 35px;
+        }
+        
+        .signup{
+            top:10%;
+            right: 30px;
+            position: absolute;
+            display: grid;
+            align-content: center;
+            justify-items:end;
+        }
+        
+        
+        .signup a,
+        .signup i{
+            grid-column: 3/4;
+            color: var(--darkpink);
+            width: 25px;
+            height: 25px;
+            font-size: 40px;
+            text-decoration: none;
+            transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        .signup a:hover,
+        .signup i:hover{
+            color: var(--lightpink);
+        }
+
+@media only screen and (max-width: 1000px){
+
+    
+        nav{
+            background: rgba(48,57,82,1);
+            }
+    
+    a{
+        font-size: 3rem;
+    }
+      .signup{
+        top:10%;
+        right: 30px;
+        position: absolute;
+    }
+}
+@media only screen and (max-width: 500px){
+    .logo h1{
+         font-size: 25px;
+    }
+    
+    [class*="menu"]{
+        height: 2px;
+    }
+    .signup{
+        top:10%;
+        right: 30px;
+        position: absolute;
+    }
+   
+    .signup a,
+    .signup i{
+            width: 20px;
+            height: 20px;
+    }
+    
+      a{
+        font-size: 2.3rem;
+    }
+}

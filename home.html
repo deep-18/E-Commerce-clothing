@@ -1,0 +1,513 @@
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:40cc0,700,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="nav-jsfile.js"></script>
+        <link rel="stylesheet" type="text/css" href="footer.css">
+        <link rel="stylesheet" type="text/css" href="header.css">
+        <link rel="stylesheet" type="text/css" href="./font/stylesheet.css">
+<title>home of UNCHARTED&copy;</title>   
+    <style>
+        *,*::before,*::after{
+            box-sizing: border-box;
+        }
+        :root{
+            --lightpink: #F8A5C2;
+            --darkpink: #EF5B67;
+            --darkblue:  #303952;
+            
+        }
+        body{
+            top:0;
+            left: 0;
+            margin: 0;
+            cursor: crosshair;
+        }
+        
+       
+        .section1{
+            top:0;
+            left:0;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+        .hero{
+            top:0;
+            left: 0;
+            width:75%;
+            padding-left: 80px;
+            padding-right: 80px;
+            position: relative;
+            display: grid;
+            z-index: 2;
+            grid-template-columns: 100%;
+            grid-template-rows: 40% 25% 10%;
+            grid-row-gap: 1rem;
+        }
+        
+        .hero h1{
+            margin-bottom: 20px;
+            font-family: 'monument_extendedultrabold','Montserrat';
+            font-size: 6rem;
+            color: var(--darkpink);
+            text-transform: uppercase;
+        }
+        
+        .hero h2{
+            font-size:2.5rem;
+            margin-bottom: 20px;
+            color: var(--darkpink);
+            font-family: 'Old Standard TT', serif;
+            font-weight: 100;
+            text-align: justify;
+        }
+        
+        .hero h3{
+            font-size:1rem;
+            color: var(--darkpink);
+            font-family: 'Montserrat';
+            text-transform: uppercase;
+        }
+        
+        .decor{
+            bottom:-10;
+            right:0;
+            position: absolute;
+            z-index: -10;
+            width: 100%;
+            height: auto;
+        }
+        
+        .decor img{
+            bottom:0;
+            right:0;
+            width: 100%;
+            height:auto;
+        }
+
+        video{
+            bottom:0;
+            right:0;
+            position: absolute;
+            z-index: 0;
+            width: 635px;
+            height: 950px;
+            background-color: var(--lightpink);
+        }
+        .circle{
+            top:54%;
+            right: 34%;
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            z-index: 100;
+            animation: animatemyname 15s linear 0.3s infinite ;
+        }
+        
+        @keyframes animatemyname{
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        .section2{
+            top:0;
+            left: 0;
+            position: relative;
+            padding: 100px;
+            padding-bottom: 0px;
+            background-color: var(--lightpink);
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100%;
+            grid-column-gap: 100px;
+            overflow: hidden;
+        }
+        
+        .gallery{
+            top:10px;
+            left: 0;
+            position: relative;
+            width: 60%;
+            height: 60%;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 60px 1fr 60px;
+            grid-column-gap: 10px;
+        }
+        .girl{
+            object-fit: contain;
+            width: 300px;
+            height: 400px;
+            grid-column: 1/2;
+            grid-row: 2/4;
+            animation: imgfloat 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes imgfloat{
+            0%{
+                transform: translateY(0) ;
+            }
+            100%{
+                transform: translateY(-20px) ;
+            }
+        }
+        .boy{
+            object-fit: contain;
+            width: 300px;
+            height: 400px;
+            grid-column: 2/3;
+            grid-row: 1/3;
+            animation: imgfloat2 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes imgfloat2{
+            0%{
+                transform: translateY(0) ;
+            }
+            100%{
+                transform: translateY(20px) ;
+            }
+        }
+        .info{
+            top:0px;
+            left: 100px;
+            position: relative;
+            width: 60%;
+            height: 70%;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 60% 20% 20%;
+            grid-row-gap: 0px;
+            justify-items:start;
+            align-items: center;
+            z-index: 1;
+            font-family: 'Montserrat';
+        }
+        
+        .info h1{
+            font-size: 4rem;
+            color: var(--darkblue);
+            font-weight: 800;
+        }
+        .info p{
+            font-size: 1rem;
+            color: var(--darkblue);
+        }
+        .info button{
+            height: 50px;
+            width: 260px;
+            display: block;
+            justify-content: center;
+            background-color: transparent;
+            border: 2px var(--darkblue) solid;
+            border-radius: 50px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        
+        .info button:hover{
+            background-color: var(--darkblue);
+            box-shadow: 10px 15px 5px grey;
+        }
+        
+        .info a{
+            font-family: "Montserrat";
+            text-decoration: none;
+            font-size: 24px;
+            color: var(--darkblue);
+        }
+        .info button:hover a{
+            color: var(--lightpink);
+        }
+        .decor2{
+            bottom:-10px;
+            right:0;
+            position: absolute;
+            z-index: 0;
+            width: 100%;
+        }
+        
+        .decor2 img{
+            bottom: 0;
+            right:0;
+            width: 100%;
+            height: auto;
+        }
+        .section2 h7{
+            display: none;
+        }
+@media only screen and (max-width: 1000px){
+    
+        .hero{
+            width:100%;
+            padding-left: 0px;
+            padding-right: 0px;
+            grid-template-rows: 40% 25% 10%;
+            grid-row-gap: 1rem;
+            place-items: center center;
+        }
+        .hero h1{
+            font-size: 4rem;
+        }
+        
+        .hero h2{
+            font-size:2rem;
+        }
+        
+        .hero h3{
+            font-size:1rem;
+        }
+        
+        video{
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100vh;
+        }
+        
+        .circle{
+            top:50%;
+            right: -20px;
+        }
+        .section2{
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            grid-template-columns: 100%;
+            grid-template-rows: 1fr 1fr;
+            grid-column-gap: 30px;
+        }
+        .gallery{
+            width: 100%;
+            height: 80vh;
+            grid-template-columns: 100%;
+            grid-template-rows: 50% 50%;
+            grid-column-gap: 10px;
+            justify-items:start;
+            align-items: center;
+        }
+        .gallery img:nth-of-type(1){
+            width: 300px;
+            height: 240px;
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+    
+        .gallery img:nth-of-type(2){
+           width: 300px;
+            height: 240px;
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .info{
+            top:-100%;
+            left: 50%;
+            width: 50%;
+            grid-template-rows: 60% 20% 20%;
+            grid-row-gap: 20px;
+        }
+        .info h1{
+            font-size: 3rem;
+        }
+        .info p{
+            font-size: 1rem;
+        }
+        .info button{
+            width: 60%;
+        }
+        .info a{
+            font-size: 20px;
+        }
+    }
+@media only screen and (max-width: 500px){
+
+        .section1{
+            height: 100vh;
+            background-color: var(--lightpink);
+        }
+        video{
+            top:-100px;
+            height: auto;
+        }
+        .hero{
+            padding-top: 10%;
+            grid-row-gap: 60px;
+        }
+        .circle{
+            top:60%;
+            left:0;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+        }
+        .hero h1{
+            font-size: 2.1rem;
+        }
+        
+        .hero h2{
+            font-size:1.3rem;
+        }
+        
+        .hero h3{
+            font-size:0.8rem;
+        } 
+        .decor{
+            display: none;
+        }
+        .section2 h7{
+            display: block;
+            font-size: 1.6rem;
+            font-family: 'Montserrat';
+            text-align: center;
+            color: var(--darkblue);
+        }
+        .gallery{
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 50%;
+            height: 50vh;
+            grid-template-columns: 100%;
+            grid-template-rows:1fr 1fr;
+            grid-row-gap: 10px;
+            place-items: center center;
+        }
+        .girl{
+            width: 300px;
+            height: 240px;
+            grid-column: 1/2;
+            grid-row: 1/2;
+           
+        }
+        @keyframes imgfloat{
+            0%{
+                transform: translateX(0) ;
+            }
+            100%{
+                transform: translateX(-20px) ;
+            }
+        }
+
+        .boy{
+            width: 300px;
+            height: 240px;
+            grid-column: 1/2;
+            grid-row: 2/3;
+          
+        }
+        @keyframes imgfloat2{
+            0%{
+                transform: translateX(0) ;
+            }
+            100%{
+                transform: translateX(20px) ;
+            }
+        }
+        .info{
+            top:0;
+            left: 0;
+            padding: 0px;
+            width: 100%;
+            text-align: center;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 50% 50%;
+            place-items: center center;
+        }
+        .info h1{
+            display: none;
+        }
+        .info button:hover{
+            box-shadow: 3px 5px 3px grey;
+        }
+        }
+    </style>
+</head>
+<body>
+<nav id="nav">
+        <div class="menu" onclick="openNav()">
+            <div class="menu1" ></div>
+            <div class="menu2" ></div>
+            <div class="menu3" ></div>
+        </div>
+        <div class="logo">
+            <h1>unchARTed</h1>
+        </div>
+        <div class="signup">
+            <a href="#"><i class="material-icons">perm_identity</i></a>
+        </div>
+    <div class="fullnav" id="menu-display">
+        <div class="menu-new" onclick="closeNav()">
+            <div class="menu-new1"></div>
+            <div class="menu-new2"></div>
+        </div>
+        
+        <a class="item active" href="#">HOME</a>
+        <a class="item" href="#"><span>APPARELS</span></a>
+        <a class="item" href="#"><span>STORE</span></a>
+        <a class="item" href="#"><span>JOURNEY</span></a>
+        <a class="item" href="#"><span>CONTACT</span></a>
+    </div>
+</nav>
+<div class="section1">
+    <div class="hero">
+        <h1>The Originals</h1>
+        <h2>"Clothes mean nothing until someone<br> lives in them."</h2>
+        <h3 style="color:var(--darkblue);">CRAFTED BY WORLD'S BEST FASHION DESIGNERS</h3>
+    </div>
+    <div class="decor">
+        <img class="item1"src="./images/pinksvg1.svg"/s>
+    </div>
+    <img class="circle" src="./images/circle-name.png"/>
+
+        <video autoplay loop muted>
+            <source src="homevideo.mp4" type="video/mp4">
+        </video>
+</div>
+<div class="section2">
+    <h7> Spring Collection 2019</h7>
+    <div class="gallery">
+        <img class="girl" src="./images/homegirl.jpg" alt="girl"/>
+        <img class="boy" src="./images/homeboy.jpg" alt="boy"/>
+    </div>
+    <div class="info">
+        <h1><b>Spring<br>Collection<br>2019</b></h1>
+        <p>Limited designs just for spring is launched. Grab this designs and fling the spring!</p>
+        <button><a href="">Let's shop</a></button>
+    </div>
+    <div class="decor2">
+        <img src="./images/whitesvg.svg"/>
+    </div>
+</div>
+<div class="footer">
+    <div class="con-info">
+        <div class="socials">
+            <h2>instagram</h2>
+            <h2>facebook</h2>
+            <h2>twitter</h2>
+        </div>
+        <div class="mails">
+            <div class="mail1">
+                 <h2>For any other inquires email us at:</h2>
+                <h2><a href="mailto:hello@uncharted.io">hello@uncharted.io</a></h2>
+            </div>
+            <div class="team">
+                <h2> Made with ❤️ by Dhruval Raval and Deep Raval</h2>
+            </div>
+        </div>
+    </div>
+    <div class="rights">
+        <h3>All rights reserved by UNCHARTED<sup>&copy;</sup></h3>
+    </div>
+</div>
+
+</body>
+</html>

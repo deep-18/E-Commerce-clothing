@@ -1,0 +1,151 @@
+      .footer{
+            top:0;
+            left: 0;
+            position: relative;
+            padding-left:50px;
+            padding-right: 50px;
+            width: 100%;
+            display: grid;
+            z-index: 10;
+            background-color: transparent;
+            grid-template-columns: 1fr;
+            grid-template-rows: 300px 70px;
+            grid-row-gap:20px;
+        }
+        .con-info{
+            top:0;
+            left:0;
+            position: relative;
+            width: 100%;
+            padding-left: 100px;
+            padding-right: 100px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 300px;
+            justify-items:start;
+        }
+        
+        .socials{
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--darkpink);
+            font-family: 'Montserrat';
+            display: grid;
+            justify-items: space-around;
+            
+        }
+        .socials h2{
+            cursor: pointer;
+        }
+        .mails{
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--darkpink);
+            font-family: 'Montserrat';
+            display: grid;
+            grid-template-columns: 100%;
+            justify-items: space-around;
+        }
+        
+        .mails a{
+            font-size: 1rem;
+            font-weight: 400;
+            font-family: 'Montserrat';
+            text-decoration: underline;
+            color: var(--darkpink);
+        }
+        
+        .team{
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: var(--darkpink);
+            font-family: 'Montserrat';
+            display: grid;
+            justify-items: space-between;
+        }
+        
+        .team span{
+            font-size: 0.9rem;
+        }
+        
+        .rights{
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            height: 60px;
+            background-color: var(--darkblue);
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: var(--darkpink);
+            font-family: 'Montserrat';
+            display: grid;
+            place-items: center center; 
+            text-transform: uppercase;
+        }
+        
+@media only screen and (max-width: 1000px){
+
+        .con-info{
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 30px;
+            padding-bottom: 50px;
+        }   
+        .socials{
+            font-size: 0.7rem;
+            justify-items:start;
+        }
+        
+        .mails{
+            padding-left: 40px;
+            padding-bottom: 20px;
+            font-size: 0.7rem;
+            justify-items: end;
+            align-items:space-around;
+        }
+        
+        .rights{
+            font-size: 0.5rem;
+        }
+}
+@media only screen and (max-width: 500px){
+    .footer{
+            grid-template-rows: 1fr 70px;
+    }
+    .con-info{
+            padding: 20px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 50px 1fr;
+            justify-items:center;
+            grid-row-gap: 0px;
+            
+     
+    }   
+    .socials{
+            font-size: 0.5rem;
+            display: grid;
+            grid-auto-flow: column;
+            grid-column-gap: 10px;
+            justify-items: space-around;
+            text-decoration: underline;
+    }
+        
+    .mails{
+            padding-left: 20px;
+            padding-bottom: 0px;
+            font-size: 0.5rem;
+            justify-items: start;
+            align-items:space-around;
+    }
+        .mails a{
+            font-size: 0.5rem;
+        }
+        .team{
+            font-size: 0.5rem;
+            
+        }
+        .team span{
+            font-size: 0.5rem;
+        }
+}

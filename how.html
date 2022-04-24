@@ -1,0 +1,197 @@
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="nav-jsfile.js"></script>
+       
+        <link rel="stylesheet" type="text/css" href="footer.css">
+        <link rel="stylesheet" type="text/css" href="header.css">
+        <link rel="stylesheet" type="text/css" href="./font/stylesheet.css">
+<title>how clothes are made in UNCHARTED&copy;</title>   
+    <style>
+        *,*::before,*::after{
+            box-sizing: border-box;
+        }
+        :root{
+            --lightpink: #F8A5C2;
+            --darkpink: #EF5B67;
+            --darkblue:  #303952;
+            
+        }
+        body{
+            top:0;
+            left: 0;
+            margin: 0;
+            cursor: crosshair;
+            font-family: "Montserrat", sans-serif;
+        }
+        .hero{
+            top:0;
+            left:0;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            padding-left: 20%;
+            padding-top: 50px;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 25% 30% 50px;
+            justify-items:start;
+            
+        }
+        
+        .hero h1{
+            font-size: 3.5rem;
+            color: var(--darkpink);
+            text-align: center;
+            text-transform: capitalize;
+        }
+        
+        .hero li{
+            font-size: 1.8rem;
+            color: var(--darkpink);
+            text-align: start;
+        }
+        
+        .hero button{
+            font-size: 1rem;
+            color: var(--lightpink);
+            width: 200px;
+            background-color: var(--darkblue);
+            border: 2px var(--darkblue) solid;
+            border-radius: 50px;
+            text-align: center;
+            transition: 0.5s;
+        }
+        
+        .hero button:hover{
+            
+            background-color: var(--darkpink);
+            color: var(--darkblue);
+            box-shadow: 10px 15px 5px grey;
+        }
+        .bg{
+            top:0;
+            right: 0;
+            position: absolute;
+            width: 100%;
+            height: 120%;
+            z-index: -200;
+            animation: magic 3s ease-in-out 0.5s infinite alternate;
+        }
+        
+        @keyframes magic{
+            0%{
+                transform: translateY(0);
+            }
+
+            100%{
+                transform: translateY(10px);
+            }
+        }
+        @media only screen and (max-width: 1000px){
+            .hero{
+            padding-left: 5%;
+            padding-right: 5%;
+            }
+            
+            .hero h1{
+                font-size: 2.7rem;
+            }
+            
+            .hero li{
+                font-size: 1.4rem;
+            }
+            .hero button{
+                width: 160px;
+                font-size: 0.7rem;
+            }
+        }
+        
+        @media only screen and (max-width: 500px){
+            .hero{
+            padding-left: 5%;
+            padding-right: 5%;
+            }
+            
+            .hero h1{
+                font-size: 2rem;
+            }
+            
+            .hero li{
+                font-size: 1.2rem;
+            }
+            .hero button{
+                width: 150px;
+                font-size: 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<img class="bg" src="./images/pinkskew.png"/>
+<nav id="nav">
+        <div class="menu" onclick="openNav()">
+            <div class="menu1" ></div>
+            <div class="menu2" ></div>
+            <div class="menu3" ></div>
+        </div>
+        <div class="logo">
+            <h1>unchARTed</h1>
+        </div>
+        <div class="signup">
+            <a href="#"><i class="material-icons">perm_identity</i></a>
+        </div>
+    <div class="fullnav" id="menu-display">
+        <div class="menu-new" onclick="closeNav()">
+            <div class="menu-new1"></div>
+            <div class="menu-new2"></div>
+        </div>
+        
+        <a class="item" href="#">HOME</a>
+        <a class="item" href="#">APPARELS</a>
+        <a class="item" href="#">STORE</a>
+        <a class="item" href="#">JOURNEY</a>
+        <a class="item" href="#">CONTACT</a>
+    </div>
+</nav>
+<div class="hero">
+    <h1>HOW WE MAKE OUR CLOTHES</h1>    
+    <div class="list">
+        <ol >
+            <li>Sketch out multiple ideas.</li>
+            <li>Design them and analysis it.</li>
+            <li>Stitch it in various methods.</li>
+            <li>Do it multiple times to get the best.</li>
+        </ol>
+    </div>
+    <button href="">Attend our workshop</button>
+</div>
+    
+<div class="footer">
+    <div class="con-info">
+        <div class="socials">
+            <h2>instagram</h2>
+            <h2>facebook</h2>
+            <h2>twitter</h2>
+        </div>
+        <div class="mails">
+            <div class="mail1">
+                 <h2>For any other inquires email us at:</h2>
+                <h2><a href="mailto:hello@uncharted.io">hello@uncharted.io</a></h2>
+            </div>
+            <div class="team">
+                <h2> Made with ❤️ by Dhruval Raval and Deep Raval</h2>
+            </div>
+        </div>
+    </div>
+    <div class="rights">
+        <h3>All rights reserved by UNCHARTED<sup>&copy;</sup></h3>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="nav-jsfile.js"></script>
+        <link rel="stylesheet" type="text/css" href="footer.css">
+        <link rel="stylesheet" type="text/css" href="header.css">
+        <link rel="stylesheet" type="text/css" href="./font/stylesheet.css">
+
+<title>Contact UNCHARTED&copy;</title>
+    <style>
+     *,*::before,*::after{
+            box-sizing: border-box;
+        }
+        :root{
+            --lightpink: #F8A5C2;
+            --darkpink: #EF5B67;
+            --darkblue:  #303952;
+            
+        }
+        body{
+            top:0;
+            left: 0;
+            margin: 0;
+            cursor: crosshair;
+            
+        }   
+        
+        .hero{
+            top:0;
+            left:0;
+            width: 100%;
+            height: 90vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100%;
+            grid-column-gap: 100px;
+            font-family: "Montserrat", sans-serif;
+            padding-left: 70px;
+            padding-right: 70px;
+            padding-top: 30px;
+        }
+        
+        .section1{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 200px 200px 70px;
+            grid-row-gap: 30px;
+            padding-left: 20px;
+            
+        }
+        
+        .section1 h1{
+            color: var(--darkpink);
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+        .section1 h3{
+            color: var(--darkpink);
+            font-size: 1.5rem;
+        }
+        .section1 h4,
+        .section1 a{
+            color: var(--darkblue);
+            font-size: 1rem;
+            font-family: "Montserrat";
+            text-decoration: underline;
+        }
+         .section1 p{
+            color: var(--darkpink);
+            font-size: 1rem;
+            font-style: italic;
+            padding-top: 40px;
+        }
+        .section2{
+            padding-top: 70px;
+        }
+        .card{
+            animation: magic 3s ease-in-out infinite alternate;
+            width: 80%;
+        }
+        
+        @keyframes magic{
+            0%{
+                transform: translateY(0) rotateZ(0) rotateX(0);
+            }
+            100%{
+                transform: translateY(-20px) rotateZ(-1deg) rotateX(-20deg);
+            }
+        }
+            
+        .shadow{
+            animation: shad 3s ease-in-out infinite alternate; 
+            width: 80%;
+        }
+        
+        @keyframes shad{
+            0%{
+                transform: scaleX(1);
+            }
+            100%{
+                transform: scaleX(0.4);
+            }
+         }
+        
+        @media only screen and (max-width: 1000px){
+            .hero{
+                grid-template-columns: 1fr;
+                grid-template-rows: 100%;
+                height: 50%;
+                }
+            
+            .section1{
+                display: grid;  
+                grid-template-columns: 100%;
+                grid-template-rows: 0.5fr 0.5fr 0.3fr;
+                grid-row-gap: 10px;
+                place-items: center center;
+                text-align: center;
+            }
+            .section2{
+                display: none;
+            }
+            
+            .section1 h1{
+                font-size: 2rem;
+            }
+            .section1 h3{
+                font-size: 1.3rem;
+            }
+            .section1 h4,a{
+                font-size: 0.8rem;
+            }
+             .section1 p{
+                font-size: 0.5rem;
+                padding-top: 0px;
+            }
+            .card{
+                width: 50%;
+            }
+            
+            .shadow{
+                display: none;
+            }
+        }
+        
+        
+    </style>
+</head>
+<body>
+<nav id="nav">
+        <div class="menu" onclick="openNav()">
+            <div class="menu1" ></div>
+            <div class="menu2" ></div>
+            <div class="menu3" ></div>
+        </div>
+        <div class="logo">
+            <h1>unchARTed</h1>
+        </div>
+        <div class="signup">
+            <a href="#"><i class="material-icons">perm_identity</i></a>
+        </div>
+    <div class="fullnav" id="menu-display">
+        <div class="menu-new" onclick="closeNav()">
+            <div class="menu-new1"></div>
+            <div class="menu-new2"></div>
+        </div>
+        
+        <a class="item" href="#"><span>HOME</span></a>
+        <a class="item" href="#"><span>APPARELS</span></a>
+        <a class="item" href="#"><span>STORE</span></a>
+        <a class="item" href="#"><span>JOURNEY</span></a>
+        <a class="item active" href="#">CONTACT</a>
+    </div>
+</nav>
+<div class="hero">
+    <div class="section1">
+        <div class="item1">
+            <h1>BUY OUR FRANCHISE</h1>
+            <h3>Apply to buy our franchise at:</h3>
+            <h4><a href="mailto:franchise@uncharted.io">franchise@uncharted.io</a></h4>
+        </div>
+        <div class="item2">
+            <h1>JOIN OUR DESIGNER TEAM</h1>
+            <h3>Apply to join our designer team at:</h3>
+            <h4><a href="mailto:recruite@uncharted.io">recruite@uncharted.io</a></h4>
+        </div>
+        <p>
+            We will consider your application only
+            if all our conditions will be fullfilled&#42;
+        </p>
+    </div>
+    <div class="section2">
+        <img class="card" src="./images/card.png"/>
+        <img class="shadow" src="./images/shadow.png"/>
+    </div>
+</div>
+<div class="footer">
+    <div class="con-info">
+        <div class="socials">
+            <h2>instagram</h2>
+            <h2>facebook</h2>
+            <h2>twitter</h2>
+        </div>
+        <div class="mails">
+            <div class="mail1">
+                 <h2>For any other inquires email us at:</h2>
+                <h2><a href="mailto:hello@uncharted.io">hello@uncharted.io</a></h2>
+            </div>
+            <div class="team">
+                <h2> Made with ❤️ by Dhruval Raval and Deep Raval</h2>
+            </div>
+        </div>
+    </div>
+    <div class="rights">
+        <h3>All rights reserved by UNCHARTED<sup>&copy;</sup></h3>
+    </div>
+</div>
+</body>
+</html>

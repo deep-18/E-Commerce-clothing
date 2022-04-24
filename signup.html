@@ -1,0 +1,249 @@
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:40cc0,700,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="nav-jsfile.js"></script>
+        <link rel="stylesheet" type="text/css" href="footer.css">
+        <link rel="stylesheet" type="text/css" href="header.css">
+    <title>SignUp</title>
+    <style>
+        *,*::before,*::after{
+            box-sizing: border-box;
+        }
+        :root{
+            --lightpink: #F8A5C2;
+            --darkpink: #EF5B67;
+            --darkblue:  #303952;
+            
+        }
+        body{
+            top:0;
+            left: 0;
+            margin: 0;
+            cursor: crosshair;
+        
+        }
+        .box
+        {
+            height: 80%;
+            width: 25%;
+            border: 2px solid;
+            border-color: var(--darkblue);
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40px;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        .box h1{
+            position: relative;
+            text-align: center;
+            color: var(--darkblue);
+            font-family: 'montserrat';
+            margin-bottom: 10%;
+            
+        }
+        .box input
+        {
+            margin-left: 15% ;
+            margin-bottom: 45px;
+            border: none;
+            outline: none;
+            padding-bottom: 2px;
+            background:none;
+            width: 70%;
+	        color:var(--darkblue);
+	        font-size:15px;
+		    border-bottom: 1.3px solid var(--darkblue);
+            
+            
+         }
+        .box textarea
+        {
+            position: relative;
+            margin-left: 15%;
+            margin-bottom: 45px;
+            border: none;
+            outline: none;
+            padding-bottom: 2px;
+            background:none;
+            width: 70%;
+	        color:white;
+	        font-size:15px;
+		    border-bottom: 1.3px solid var(--darkblue);
+            border-right: 1.3px solid var(--darkblue);
+        }
+          textarea::placeholder
+        {
+            line-height: 55px;
+        }
+    
+        .btn1
+        {   left: 50%;
+            transform: translateX(-50%);
+            background: var(--darkblue);
+            color: var(--lightpink);
+            border: 2px solid var(--darkblue);
+            position: relative;
+            width: 150px;
+            height: 35px;
+            margin-bottom: 35px;
+            border-radius: 50px;
+            transition: 0.5s;
+            font-family: 'montserrat';
+        }
+        .btn1:hover
+        {
+            box-shadow: 10px 15px 5px grey;
+            background-color:  var(--darkpink);
+            color: var(--darkblue);
+            border: var(--darkpink);
+            font-family: 'montserrat';
+        }
+        
+        .hero
+        {
+            height: 100vh;
+        }
+        
+        ::placeholder
+        {
+            color: var(--darkpink);
+            font-family: 'montserrat';
+        }
+        .box a
+        {
+            font-size: 1rem;
+            cursor: pointer;
+             position: relative;
+            text-align: center;
+           margin-left: 23%;
+            font-family: 'montserrat';
+            margin-bottom: 10%;
+        }
+        .overlay
+        {   z-index: -10;
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(var(--lightpink),white);
+        }
+        
+        @media only screen and (max-width: 800px){
+            .box
+        {
+        
+            margin-top: 30px;
+            width: 38%;
+            
+        }
+        .box input
+        {
+            margin-bottom: 35px;
+            font-size:12px;
+		    border-bottom:1px solid var(--darkblue);
+        
+        }
+        
+        
+        @media only screen and (max-width: 500px){
+            .box
+            {
+            
+                margin-top: 30px;
+                width:75%;
+               
+            }
+            .box input
+            {
+                margin-bottom: 35px;
+                font-size:12px;
+		        border-bottom:1px solid var(--darkblue);
+            }
+            
+            .hero img
+            {
+                height: 0;
+                width: 0;
+            
+            }
+         
+            }
+        
+            
+            
+        
+    </style>  
+    </head>
+    <body>
+      <nav id="nav">
+        <div class="menu" onclick="openNav()">
+            <div class="menu1" ></div>
+            <div class="menu2" ></div>
+            <div class="menu3" ></div>
+        </div>
+        <div class="logo">
+            <h1>unchARTed</h1>
+        </div>
+        <div class="signup">
+            <a href="#"><i class="material-icons">perm_identity</i></a>
+        </div>
+    <div class="fullnav" id="menu-display">
+        <div class="menu-new" onclick="closeNav()">
+            <div class="menu-new1"></div>
+            <div class="menu-new2"></div>
+        </div>
+        
+        <a class="item" href="#">HOME</a>
+        <a class="item" href="#">APPARELS</a>
+        <a class="item" href="#">STORE</a>
+        <a class="item" href="#">JOURNEY</a>
+        <a class="item" href="#">CONTACT</a>
+     </div>
+    </nav>
+    <div class="overlay"> </div>
+    <div class="box">
+      <form action="login.php" method="post">
+          <h1>SIGN UP</h1>
+        <input  type="text" required name="Fname" placeholder="fullname"> 
+        <input  type="text" required name="Email" placeholder="email">
+        <input type="password" required name="Password" placeholder="password">
+        <input  type="text" required name="Contact" placeholder="contact">
+          <textarea required name="Address" placeholder="address" rows="3" cols="10"></textarea>
+        <button class="btn1"name="submit">SIGN UP</button><br>
+        <a>already have an account</a>  
+      </form>        
+    </div>
+    
+       
+ <div class="footer">
+    <div class="con-info">
+        <div class="socials">
+            <h2>instagram</h2>
+            <h2>facebook</h2>
+            <h2>twitter</h2>
+        </div>
+        <div class="mails">
+            <div class="mail1">
+                 <h2>For any other inquires email us at:</h2>
+                <h2><a href="mailto:hello@uncharted.io">hello@uncharted.io</a></h2>
+            </div>
+            <div class="team">
+                <h2> Made with<span> ❤️ </span>by Dhruval Raval and Deep Raval</h2>
+            </div>
+        </div>
+    </div>
+    <div class="rights">
+        <h3>All rights reserved by UNCHARTED<sup>&copy;</sup></h3>
+    </div>
+</div>
+    </body>
+</html>
